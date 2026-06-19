@@ -22,6 +22,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -266,6 +271,7 @@ h3 {
   border-radius: 8px;
   padding: 0 22px;
   font-weight: 900;
+  text-align: center;
 }
 
 .button.primary {
@@ -601,6 +607,15 @@ h3 {
   overflow-wrap: anywhere;
 }
 
+.brand,
+.button,
+.hero-badges span,
+.tool-cloud span,
+.stats strong,
+.stats span {
+  min-width: 0;
+}
+
 .contact-links a:hover {
   border-color: rgba(34, 211, 238, 0.5);
   background: rgba(34, 211, 238, 0.08);
@@ -677,6 +692,10 @@ footer a {
     padding: 48px 0 58px;
   }
 
+  .hero-actions {
+    margin-top: 30px;
+  }
+
   .hero-profile {
     max-width: 334px;
   }
@@ -705,40 +724,193 @@ footer a {
   main,
   .nav,
   footer {
-    width: min(100% - 28px, 1180px);
+    width: min(100% - 24px, 1180px);
+  }
+
+  .site-header {
+    background: rgba(7, 10, 18, 0.92);
+  }
+
+  .nav {
+    min-height: 62px;
+    gap: 12px;
+  }
+
+  .brand {
+    max-width: calc(100% - 88px);
+    font-size: 0.98rem;
+    white-space: nowrap;
+  }
+
+  .brand::before {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+  }
+
+  .nav-toggle {
+    min-height: 40px;
+    padding: 8px 11px;
+  }
+
+  .nav-links {
+    top: 62px;
+    right: 12px;
+    left: 12px;
+  }
+
+  .nav-links a {
+    padding: 13px 15px;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: clamp(2.45rem, 13vw, 3.25rem);
+    line-height: 0.96;
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-size: clamp(1.85rem, 9vw, 2.35rem);
+  }
+
+  .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.09em;
   }
 
   .hero {
-    padding-top: 34px;
+    gap: 28px;
+    padding: 32px 0 48px;
+  }
+
+  .hero-copy::before {
+    left: -36px;
+    top: -24px;
+    width: 118px;
+    height: 118px;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .hero-badges {
+    gap: 8px;
+    margin-top: 22px;
+  }
+
+  .hero-badges span,
+  .tool-cloud span {
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .button {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 16px;
+  }
+
+  .hero-profile {
+    width: min(100%, 320px);
+    margin: 0 auto;
+    padding: 9px;
+  }
+
+  .hero-profile::before {
+    filter: blur(13px);
+  }
+
+  .hero-profile::after {
+    inset: 9px;
   }
 
   .hero-profile img {
-    height: 420px;
+    height: min(102vw, 410px);
   }
 
   .profile-card {
     position: static;
     margin-top: 10px;
     max-width: none;
+    padding: 13px 14px;
+  }
+
+  .stats {
+    gap: 12px;
   }
 
   .stats {
     grid-template-columns: 1fr;
   }
 
+  .stats div {
+    min-height: auto;
+    padding: 18px;
+  }
+
   .panel,
   .project-grid article,
   .contact,
   .timeline-item > div:last-child {
-    padding: 22px;
+    padding: 20px;
   }
 
   .section {
-    padding-top: 74px;
+    padding-top: 64px;
+  }
+
+  .about {
+    gap: 22px;
+  }
+
+  .about > p {
+    padding-left: 16px;
+    font-size: 1rem;
+  }
+
+  .grid.two,
+  .project-grid,
+  .split {
+    gap: 14px;
+  }
+
+  .timeline {
+    margin-left: 6px;
+  }
+
+  .timeline-item {
+    padding: 0 0 28px 24px;
+  }
+
+  .timeline-item::before {
+    left: -8px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .cert-list {
+    padding-left: 38px;
+  }
+
+  .contact {
+    gap: 24px;
+    margin: 72px 0 48px;
+  }
+
+  .contact-links {
+    gap: 10px;
+  }
+
+  .contact-links a {
+    padding: 13px 14px;
   }
 
   footer {
