@@ -689,20 +689,35 @@ footer a {
   .hero {
     gap: 34px;
     min-height: auto;
-    padding: 48px 0 58px;
+    padding: 38px 0 54px;
   }
 
   .hero-actions {
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: min(100%, 380px);
+    margin-top: 28px;
+  }
+
+  .button {
+    width: 100%;
   }
 
   .hero-profile {
-    max-width: 334px;
+    width: min(100%, 350px);
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .hero-profile img {
+    height: min(72vw, 430px);
   }
 
   .profile-card {
-    right: 10px;
-    bottom: 28px;
+    position: static;
+    max-width: none;
+    margin-top: 10px;
   }
 
   .stats {
@@ -764,7 +779,7 @@ footer a {
   }
 
   h1 {
-    font-size: clamp(2.45rem, 13vw, 3.25rem);
+    font-size: clamp(2.35rem, 10vw, 3.35rem);
     line-height: 0.96;
     margin-bottom: 18px;
   }
@@ -779,8 +794,8 @@ footer a {
   }
 
   .hero {
-    gap: 28px;
-    padding: 32px 0 48px;
+    gap: 26px;
+    padding: 30px 0 46px;
   }
 
   .hero-copy::before {
@@ -805,22 +820,13 @@ footer a {
     font-size: 0.82rem;
   }
 
-  .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 26px;
-  }
-
   .button {
-    width: 100%;
     min-height: 48px;
     padding: 0 16px;
   }
 
   .hero-profile {
     width: min(100%, 320px);
-    margin: 0 auto;
     padding: 9px;
   }
 
@@ -837,9 +843,6 @@ footer a {
   }
 
   .profile-card {
-    position: static;
-    margin-top: 10px;
-    max-width: none;
     padding: 13px 14px;
   }
 
